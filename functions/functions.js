@@ -1,8 +1,15 @@
-//6.8 Arrow Function
+//6.9 Callback Function
 
+function sayMyName(name) {
+    console.log('Antes de executar a funcao callback')
 
-const sayMyName = () => {
-    console.log('Walishow')
+    name()
+
+    console.log('depois de executar a funcao callback')
 }
 
-sayMyName()
+sayMyName(
+    () => {
+        console.log('estou em uma callback')
+    }
+)
