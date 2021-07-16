@@ -113,3 +113,15 @@ console.log(typeof clima)
             }
             console.log('> Existe x antes do bloco? ', x)
 */
+
+// 4.4. Escopes 
+
+/*        
+        let y = 1
+        {
+            y = 0 // se eu nao definir o tipo ele procura nos outros escopos superiores
+            console.log('existe o Y antes do bloco?', y) // let e local ou seja esta dentro do escope
+        }
+        console.log('existe o Y depois do bloco?', y) // erro de variavel local
+        
+*/
