@@ -1,19 +1,9 @@
-//6. Functions
+//6. Agrupamentos e parametros
 
-// Aplicativo de frases motivacionais
-
-//declaration - declaracao da funcao
-//function statement
-function createPhrases(){
-    console.log('Estudar e muito bom')
-    console.log('Paciencia e persistencia')
-    console.log('Revisao e a mae do aprendizado')
+//function expression or function anonymous
+//parametros (parameters)
+const sum = function(number1, number2){
+    console.log(number1+number2)
 }
 
-// execute, run, call, invoke function
-createPhrases()
-createPhrases()
-createPhrases()
-
-
-console.log('Fim do programa')
+sum(2, 3) // arguments
