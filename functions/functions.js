@@ -1,7 +1,8 @@
-//6.6 Function hoisting
+//6.8 Arrow Function
+
+
+const sayMyName = () => {
+    console.log('Walishow')
+}
 
 sayMyName()
-
-function sayMyName() {
-    console.log('Walison')
-}
