@@ -1,11 +1,12 @@
-//6.3 Outra maneira de entender funcoes
+//6.4 Function Scope
 
-//funcao e um liquidificador
+let subject
 
-function fazerSuco(fruta1, fruta2){
-    return 'suco de: ' + fruta1+fruta2
+function createThink() {
+    subject = 'study'
+
 }
 
-const copo = fazerSuco('banana', ' apple')
-
-console.log(copo)
+console.log(subject)
+createThink()
+console.log(subject)
