@@ -72,4 +72,44 @@ console.log({
 })
 
 
-//3.7. Conclusão
+//4.1. Variaveis
+/* 
+var
+let
+const constante
+*/
+
+let clima = "quente"
+var clima1 = "frio"
+
+
+console.log(clima)
+
+//4.2. Tipos Dinamicos
+let clima3 = ""
+
+console.log(typeof clima)
+
+
+//4.3. Tipos Dinamicos - determina a visibilidade de alguma variavel no JS
+
+/*
+            conceito de hoisting = elevacao 
+
+            var x
+            console.log('> Existe x antes do bloco? ', x)
+            {
+                var x = 0
+            }
+
+                        //let x = 0 // local
+            //console.log(x)
+
+
+            //var y = 0 // o var e global e local ou seja executa tudo que esta dentro do script
+            
+            {
+                var x = 0
+            }
+            console.log('> Existe x antes do bloco? ', x)
+*/
