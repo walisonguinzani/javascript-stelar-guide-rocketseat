@@ -91,7 +91,7 @@ let clima3 = ""
 console.log(typeof clima)
 
 
-//4.3. Tipos Dinamicos - determina a visibilidade de alguma variavel no JS
+//4.3. Tipos Dinamicos - 
 
 /*
             conceito de hoisting = elevacao 
@@ -114,7 +114,7 @@ console.log(typeof clima)
             console.log('> Existe x antes do bloco? ', x)
 */
 
-// 4.4. Escopes 
+// 4.4. Escopes - determina a visibilidade de alguma variavel no JS
 
 /*        
         let y = 1
@@ -125,3 +125,70 @@ console.log(typeof clima)
         console.log('existe o Y depois do bloco?', y) // erro de variavel local
         
 */
+
+// 4.5. Nomeando Variaveis 
+/*        
+        O JS e case sensitive
+        
+*/
+
+//5. Declaration assignment var
+        //declaration
+        var name
+
+        //assignment or atribuicao de valores
+        name = "Walison"
+
+        // tipo de dado
+        console.log(typeof name)
+        
+//5.1 Grouping Declarations
+
+    let age = 20
+    let isHuman = true
+
+    // declaracoes conjuntas
+    let age1, isHuman1
+
+    age1 = 26
+    isHuman1 = true
+
+     //passando multiplos argumentos na funcao
+console.log(name, age, isHuman1) //passando multiplos argumentos
+
+//5.2 Concatenando e interpolando variáveis
+
+        //concatenando valores
+        console.log('o '+ name + ' tem '+ age + ' anos.')
+
+        //interpolando valores com template literals or template strings
+        console.log(`o ${name} tem ${age1} anos.`)
+
+//5.3 Objects
+
+    // object
+
+    const Person = {
+        nickname: "Walishow",
+        age: 26,
+        weight: 78.7,
+        isAdmin: true
+
+    }
+
+    console.log(`${Person.nickname} tem ${Person.age} anos.`)
+
+//5.4 Arrays
+
+    const Animals = [
+        'Lion',
+        'Monkey',
+        {// iniciando um objeto
+            nameanimal: 'Frida',
+            ageanimal: 1
+        }
+    ]
+    // como acessar valores dentro do array
+
+    console.log(Animals[2].nameanimal)
+    console.log(Animals[0])
