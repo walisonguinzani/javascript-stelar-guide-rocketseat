@@ -1,15 +1,19 @@
-//6.9 Callback Function
+//6.10 Function Constructor
 
-function sayMyName(name) {
-    console.log('Antes de executar a funcao callback')
-
-    name()
-
-    console.log('depois de executar a funcao callback')
+function Person (name){
+    this.name = name
+    this.walk = function() {
+        return this.name + " esta andando"
+    }
 }
 
-sayMyName(
-    () => {
-        console.log('estou em uma callback')
-    }
-)
+const wali = new Person("Walison")
+const joao = new Person ("joao")
+console.log(wali.walk())
+console.log(joao.walk())
+
+let nome = new String("Walishow")
+console.log(nome)
+
+let date = new Date("2021-07-16 18:45:00")
+console.log(date)
