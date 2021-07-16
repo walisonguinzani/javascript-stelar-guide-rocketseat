@@ -1,12 +1,7 @@
-//6.4 Function Scope
+//6.6 Function hoisting
 
-let subject
+sayMyName()
 
-function createThink() {
-    subject = 'study'
-
+function sayMyName() {
+    console.log('Walison')
 }
-
-console.log(subject)
-createThink()
-console.log(subject)
