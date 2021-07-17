@@ -1,34 +1,20 @@
-//8.13 Falsy and Truthy
+//8.14 Operators Precedence
 
 /*
-    Falsy
-    Quando um valor e considerado false em contextos onde um booleano e obrigatorio (condicionais e loops)
-
-    false
-    0
-    -0
-    ""
-    null
-    undefined
-    NaN
+    * grouping                      ( )
+    * negacao e incremento          ! ++ --
+    * multiplicacao e divisao       * /
+    * adicao e subtracao            + -
+    * relacional                    < <= > >=
+    * igualdade                     == != === !==
+    * and                           &&
+    * or                            ||
+    * condicional                   ?:
+    * assignment (atribuicao)       = += -= *=
 */
 
-console.log( NaN ? 'verdadeiro' : 'false' )
-
-/*
-    Truthy
-    Quando um valor e considerado true em contextos onde um booleano e obrigatorio (condicionais e loops)
-
-    true
-    {}
-    []
-    1
-    3.23
-    "0"
-    "false"
-    -1
-    Infinity
-    -Infinity
-*/
-
-console.log( -Infinity ? 'verdadeiro' : 'false' )
+console.log( ( 2 + 5 ) * 10 )
+console.log( true == 1 )
+console.log( false == 0 )
+console.log( 3 > 2 == 1 )
+console.log( 3 > 2 && 2 > 1 )
