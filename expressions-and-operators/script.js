@@ -1,19 +1,24 @@
-//8.8 Operatores de Comparacao maior e menor
+//8.9 Operatores de atribuicao (Assignment)
 
-let one = 1
-let two = 2
+let x
 
-// >       Maior que
-console.log(one > two)
+// assignment
+x = 1
 
-// >=      Maior ou igual a que
-console.log(one >= 1)
-console.log(two >= 1)
+// addition assignment
+x += 2
 
-// <       Menor que
-console.log(one < two)
+// subtraction assignment
+x -= 1
 
-// <=      Menor ou igaul a que
-console.log(one <= two)
-console.log(one <= 1)
-console.log(one <= 0)
+// multiplication assignment
+x *= 2
+
+// division assignment
+x /= 2
+
+// remainder, exponetiation
+x %= 2
+x **= 2
+
+console.log(x)
