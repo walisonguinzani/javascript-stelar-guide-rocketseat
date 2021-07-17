@@ -1,18 +1,9 @@
-//7.2 
-
-/*
-    Prototype
-
-    * prototype-based language
-    * prototype chain
-    * __proto__
-
-*/
-
-console.log("walison".length)
+//7.3. Strings in Numbers
 
 
-console.log(26.0.hasOwnProperty())
+    //Manipulando Strings e Numeros
 
-console.log(["a", "b"].length)
 
+
+
+    //Transformar String em Numero e Numero em String
