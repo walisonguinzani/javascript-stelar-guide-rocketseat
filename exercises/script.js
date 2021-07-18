@@ -1,51 +1,45 @@
-/*11.2 Exercicio 1
+/*11.3 Exercicio 2 - Fluxo Familiar
 
-Transformar Notas Escolares
+Crie um objeto que possuira 2 propriedades, ambas do tipo array:
+    * receitas: []
+    * despesas: []
 
-Crie um algoritmo que transforme as notas escolares do sistema numerico para sistema de notas em strings tipo A B C D F
-
-* de 90 para cima   - A
-* entre 80 - 89     - B
-* entre 70 - 79     - C
-* entre 60 - 69     - D
-* menor que 60      - F
+Agora crie uma funcao que ira calcular o total de receitas e despesas e ira mostrar uma mensagem se a familia esta com saldo positivo ou negativo, seguido do valor do saldo.
 
 */
 
-let notaEscolar;
-let scoreFinal;
-
-function getScore(notaEscolar){
-    let scoreA = notaEscolar >= 90 && notaEscolar <= 100
-    let scoreB = notaEscolar >= 80 && notaEscolar < 90
-    let scoreC = notaEscolar >= 70 && notaEscolar < 80
-    let scoreD = notaEscolar >= 60 && notaEscolar < 70
-    let scoreF = notaEscolar >= 0 && notaEscolar < 60
-    
-    
-    if (scoreA){
-        scoreFinal = "A"
-    }else if(scoreB){
-        scoreFinal = "B"
-    }else if(scoreC){
-        scoreFinal = "C"
-    }else if(scoreD){
-        scoreFinal = "D"
-    }else if(scoreF){
-        scoreFinal = "F"
-    }else{
-        console.log('Insira um valor entre 0 e 100')
-    }
-
-    return scoreFinal
+var FlowFamily = {
+    incomes: [2000, 8260, 1400.65, 2000.00],
+    expanses: [1400.56, 816, 567.23, 5000]
 }
 
-console.log(getScore(50))
-console.log(getScore(101))
-console.log(getScore(-1))
-console.log(getScore(1))
-console.log(getScore(45))
-console.log(getScore(65))
-console.log(getScore(75))
-console.log(getScore(85))
-console.log(getScore(95))
+function sum(array){
+    let total = 0
+
+    for(let value of array){
+        total += value
+    }
+
+    return total
+}
+
+function calculate(){
+    const calculateIncomes = sum(FlowFamily.incomes)
+    const calculateExpanses = sum(FlowFamily.expanses)
+
+    const balance = calculateIncomes - calculateExpanses
+
+    const positive = balance > 0
+    const negative = balance <= 0
+
+    if(positive){
+        console.log(`UAUUUU A familia esta com saldo de: R$ ${balance}`)
+    }else if(negative){
+        console.log(`"Xii a familia deve fazer um curso de financas: R$ ${balance}`)
+    }
+
+    return balance
+}
+
+
+calculate()
