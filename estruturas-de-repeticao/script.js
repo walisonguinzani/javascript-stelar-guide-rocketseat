@@ -1,12 +1,12 @@
-// 10.3 For...of
+// 10.4 For...in
 
-let Name = 'Walison'
-let Names = ['Joao', 'Paulo', 'Pedro']
-
-for(let char of Name) {
-    console.log(char)
+let Person = {
+    name: 'Walison',
+    age: 26,
+    weight: 82.4
 }
 
-for(let Nome of Names) {
-    console.log(Nome)
+for(let property in Person){
+    console.log(property)
+    console.log(Person[property])
 }
