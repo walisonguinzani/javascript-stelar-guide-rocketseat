@@ -10,7 +10,7 @@ Agora crie uma funcao que ira calcular o total de receitas e despesas e ira most
 
 var FlowFamily = {
     incomes: [2000, 8260, 1400.65, 2000.00],
-    expanses: [1400.56, 816, 567.23, 5000]
+    expanses: [1400.56, 816, 567.23, 15000]
 }
 
 function sum(array){
@@ -33,9 +33,9 @@ function calculate(){
     const negative = balance <= 0
 
     if(positive){
-        console.log(`UAUUUU A familia esta com saldo de: R$ ${balance}`)
+        console.log(`UAUUUU A familia esta com saldo de: R$ ${balance.toFixed(2)}`)
     }else if(negative){
-        console.log(`"Xii a familia deve fazer um curso de financas: R$ ${balance}`)
+        console.log(`"Xii a familia deve fazer um curso de financas: R$ ${balance.toFixed(2)}`)
     }
 
     return balance
