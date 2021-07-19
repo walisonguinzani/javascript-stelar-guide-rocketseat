@@ -1,45 +1,20 @@
-/*11.3 Exercicio 2 - Fluxo Familiar
+/*11.3 Exercicio 3 - Celsius to Fahrenheit
 
-Crie um objeto que possuira 2 propriedades, ambas do tipo array:
-    * receitas: []
-    * despesas: []
+Crie uma função que receba uma string em Celsius ou Fahrenheit e faça a transformação de uma unidade para outra
 
-Agora crie uma funcao que ira calcular o total de receitas e despesas e ira mostrar uma mensagem se a familia esta com saldo positivo ou negativo, seguido do valor do saldo.
+C = (F - 32) * 5/9
+F = C * 9/5 + 32
 
 */
 
-var FlowFamily = {
-    incomes: [2000, 8260, 1400.65, 2000.00],
-    expanses: [1400.56, 816, 567.23, 15000]
-}
+ let temperature = "60" 
 
-function sum(array){
-    let total = 0
-
-    for(let value of array){
-        total += value
-    }
-
-    return total
-}
-
-function calculate(){
-    const calculateIncomes = sum(FlowFamily.incomes)
-    const calculateExpanses = sum(FlowFamily.expanses)
-
-    const balance = calculateIncomes - calculateExpanses
-
-    const positive = balance > 0
-    const negative = balance <= 0
-
-    if(positive){
-        console.log(`UAUUUU A familia esta com saldo de: R$ ${balance.toFixed(2)}`)
-    }else if(negative){
-        console.log(`"Xii a familia deve fazer um curso de financas: R$ ${balance.toFixed(2)}`)
-    }
-
-    return balance
+function TemperatureConverter () {
+    let Celsius = (parseFloat(temperature) - 32)* 5/9
+    let Fahrenheit = parseFloat(temperature) * 9/5 +32
+    
+    return(Celsius, Fahrenheit)
 }
 
 
-calculate()
+console.log(TemperatureConverter())
