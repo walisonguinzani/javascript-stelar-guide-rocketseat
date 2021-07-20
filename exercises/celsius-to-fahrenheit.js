@@ -7,7 +7,7 @@ F = C * 9/5 + 32
 
 */
 
-let temperature = '10'
+let temperature = '10c'
 
 function TemperatureConverter() {
     //temperature = str.temperature(/(\d+)/)
