@@ -7,14 +7,20 @@ F = C * 9/5 + 32
 
 */
 
- let temperature = "60" 
+let temperature = "32F" 
 
-function TemperatureConverter () {
-    let Celsius = (parseFloat(temperature) - 32)* 5/9
-    let Fahrenheit = parseFloat(temperature) * 9/5 +32
+function TemperatureConverter() {
+
+    if (temperature.toUpperCase().includes("C")) {
+        let Fahrenheit = parseFloat(temperature) * 9/5 +32
+        console.log(`The temperature in Fahrenheit is: ${Fahrenheit}ºF`)
+    } else if (temperature.toUpperCase().includes("F")) {
+        let Celsius = (parseFloat(temperature) - 32)* 5/9
+        console.log(`The temperature in Celsius is: ${Celsius}ºC`)
+    } else {
+        console.log("Tente digitar a temperatura seguido de C ou F")
+    }
     
-    return(Celsius, Fahrenheit)
 }
 
-
-console.log(TemperatureConverter())
+TemperatureConverter()
