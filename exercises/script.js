@@ -1,26 +1,68 @@
-/*11.3 Exercicio 3 - Celsius to Fahrenheit
+/*11.4 Exercicio 4 - Find Books and Count with Arrays
 
-Crie uma função que receba uma string em Celsius ou Fahrenheit e faça a transformação de uma unidade para outra
+Baseado no Array de Livros por Categoria abaixo, faça os seguintes desafios.
 
-C = (F - 32) * 5/9
-F = C * 9/5 + 32
+    * Contar o número de categorias e o número de livros em cada categoria.
+    * Contar o número de autores.
+    * Mostrar livros do autor Augusto Cury.
+    * Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
 
 */
 
-let temperature = '10'
+const booksByCategory = [
+    { 
+        category: 'Riqueza',
+        books: [
+            {
+                author: 'Augusto Cury',
+                title: 'Armadilhas da Mente',
+            },
+            {
+                author: 'Napoleon Hill',
+                title: 'Quem Pensa Enriqueçe',
+            },
+            {
+                author: 'Augusto Cury',
+                title: 'O Vendedor de Sonhos',
+            },
+            {
+                author: 'Augusto Cury',
+                title: 'O Mestre dos Mestres',
+            },
 
-function TemperatureConverter() {
-    //temperature = str.temperature(/(\d+)/)
-    if (temperature.toUpperCase().includes("C")) {
-        let Fahrenheit = parseFloat(temperature) * 9/5 +32
-        console.log(`The temperature in Fahrenheit is: ${Fahrenheit}ºF`)
-    } else if (temperature.toUpperCase().includes("F")) {
-        let Celsius = (parseFloat(temperature) - 32)* 5/9
-        console.log(`The temperature in Celsius is: ${Celsius}ºC`)
-    } else {
-        console.log("Try typing the temperature follow the C or F.")
+        ],
+    },
+    {   
+        category: 'Inteligência Emocional',
+        books: [
+            {
+                author: 'Augusto Cury',
+                title: 'Ansiedade',
+            },
+            {
+                author: 'Augusto Cury',
+                title: 'Nunca Desista de Seus Sonhos',
+            },
+            {
+                author: 'Augusto Cury',
+                title: 'Você é Insubstituível',
+            },
+            {
+                author: 'Augusto Neto Cury',
+                title: 'Gestão da Emoção',
+            },
+        ],
     }
-    
+
+]
+
+for (var indexCategory = 0 ; indexCategory < booksByCategory.length ; indexCategory++) {
+    for (var indexBook = 0 ; indexBook < booksByCategory[indexCategory].books.length ; indexBook++) {
+        for (var indexAuthor of booksByCategory[indexCategory].books) {
+            indexAuthor++
+        }
+    }
+    console.log(`${indexCategory + 1}  - Categoria: ${booksByCategory[indexCategory].category} - Qtd. Livros: ${indexBook} - Qtd. Autores: ${indexAuthor}`)
 }
 
-TemperatureConverter()
+//for (var indexAuthor = 0 ; indexBook < booksByCategory[indexCategory].books[indexAuthor].length ; indexAuthor++) {}
