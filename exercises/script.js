@@ -77,4 +77,34 @@ function CountAuthors() {
 
 CountAuthors()
 
-//for (var indexAuthor = 0 ; indexBook < booksByCategory[indexCategory].books[indexAuthor].length ; indexAuthor++) {}
+function ShowAugustCury() {
+    let AugustCury = []
+
+    for (let Category of booksByCategory) {
+        for (let book of Category.books) {
+            if (AugustCury.indexOf(book.author) == -1 && book.author === "Augusto Cury") {
+                AugustCury.push(book.title)
+            }
+        }
+    }
+        console.log(`Livros de Agusto Cury: ${AugustCury.join("\n")}`)  
+   
+}
+
+ShowAugustCury()
+
+function ShowAuthor(author) {
+    let BooksOfAuthor = []
+
+    for (let Category of booksByCategory) {
+        for (let book of Category.books) {
+            if (BooksOfAuthor.indexOf(book.author) == -1 && book.author === author) {
+                BooksOfAuthor.push(book.title)
+            }
+        }
+    }
+        console.log(`Livros do Autor ${author}: ${BooksOfAuthor.join("\n")}`)  
+   
+}
+
+ShowAuthor('Napoleon Hill')
