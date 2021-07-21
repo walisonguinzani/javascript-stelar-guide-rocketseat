@@ -58,11 +58,23 @@ const booksByCategory = [
 
 for (var indexCategory = 0 ; indexCategory < booksByCategory.length ; indexCategory++) {
     for (var indexBook = 0 ; indexBook < booksByCategory[indexCategory].books.length ; indexBook++) {
-        for (var indexAuthor of booksByCategory[indexCategory].books) {
-            indexAuthor++
+    }
+    console.log(`${indexCategory + 1}  - Categoria: ${booksByCategory[indexCategory].category} - Qtd. Livros: ${indexBook}`)
+}
+
+function CountAuthors() {
+    let authors = []
+
+    for (let Category of booksByCategory) {
+        for (let book of Category.books) {
+            if (authors.indexOf(book.author) == -1) {
+                authors.push(book.author)
+            }
         }
     }
-    console.log(`${indexCategory + 1}  - Categoria: ${booksByCategory[indexCategory].category} - Qtd. Livros: ${indexBook} - Qtd. Autores: ${indexAuthor}`)
+    console.log(`Total de autores: ${authors.length}`)
 }
+
+CountAuthors()
 
 //for (var indexAuthor = 0 ; indexBook < booksByCategory[indexCategory].books[indexAuthor].length ; indexAuthor++) {}
